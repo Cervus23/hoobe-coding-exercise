@@ -1,6 +1,6 @@
 import styles from '@/styles/BaseLink.module.scss';
 
-export default function BaseEmbeddedLink({ content } = content) {
+export default function BaseEmbeddedLink({ content }: any) {
   const link = `https://www.${content.link.replace(
     'channel/',
     'embed/videoseries?list=',

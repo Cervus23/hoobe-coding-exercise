@@ -1,7 +1,7 @@
 import styles from '@/styles/BaseLink.module.scss';
 import HoobeIcon from '../../public/assets/HoobeIcon';
 
-export default function BaseFeaturedLink({ content } = content) {
+export default function BaseFeaturedLink({ content }: any) {
   return (
     <a href={content.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
       <div className={styles.baseLinkContainer}>
