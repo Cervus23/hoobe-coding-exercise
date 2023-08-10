@@ -8,8 +8,7 @@ export default function Profile() {
   return (
     <section className={styles.container}>
       <div className={styles.profilePhoto}>
-        <Image src={hoobeIcon} alt="hoobe-icon.png" width="104px" height="104px" />
-        {/*<img src={hoobeIcon} alt="hoobe-icon.png" />*/}
+        <Image src={hoobeIcon} alt="hoobe-icon.png" width={104} height={104} />
       </div>
       <div className={styles.profileName}>
         <span>{data.user.fullName}</span>
