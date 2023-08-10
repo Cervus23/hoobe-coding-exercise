@@ -1,0 +1,67 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0 2rem;
+
+  button {
+    --button-padding: 0.625rem 2rem;
+    background: var(--primary);
+    color: var(--white);
+    outline: none;
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-small);
+    display: flex;
+    justify-content: center;
+    padding: var(--button-padding);
+    border-radius: 2rem;
+    height: 50px;
+    align-items: center;
+    border: 0;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.12s ease-in-out;
+
+    &.createYourHoobeButton {
+      display: flex;
+      gap: 8px;
+      border-radius: 0.625rem;
+      padding: 0.5rem;
+      margin-top: 32px;
+      height: auto;
+
+      &:hover {
+        background: var(--primary-dark);
+      }
+
+      &:active {
+        background: var(--primary-light);
+      }
+    }
+  }
+
+  .internalLink {
+    margin-top: 18px;
+    padding: 0.25rem 0.75rem;
+    color: var(--primary);
+    font-size: var(--font-size-small);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-medium);
+
+    .loginLink {
+      color: var(--med-gray);
+      transition: color 0.3s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--hoobe-primary);
+      }
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

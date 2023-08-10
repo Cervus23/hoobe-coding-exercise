@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0;
+
+  .socialItemWrapper {
+    display: flex;
+    justify-content: center;
+    min-width: 3rem;
+    padding-bottom: 0.25rem;
+
+    .socialIcon {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      transition: transform 0.2s ease-in-out;
+      background-color: var(--black);
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

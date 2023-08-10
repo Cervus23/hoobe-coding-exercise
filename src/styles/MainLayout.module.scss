@@ -1,0 +1,28 @@
+.layoutContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 0 1rem;
+  width: 100%;
+  height: 100%;
+  max-width: 33.75rem;
+  background-color: var(--body-background);
+
+  @media (min-width: 768px) {
+    --layout-container-bottom-padding: var(--base-page-horizontal-padding);
+    border-radius: var(--base-page-border-radius);
+    box-shadow: 0 0.75rem 44px 0 rgba(78, 81, 82, 0.12);
+    padding: var(--base-page-vertical-padding) var(--base-page-horizontal-padding)
+      var(--layout-container-bottom-padding);
+    max-width: var(--max-page-width);
+
+    overflow: hidden;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}

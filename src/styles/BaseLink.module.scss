@@ -1,0 +1,128 @@
+.baseLinkContainer {
+  --container-padding: 1.5rem;
+  background-color: var(--black);
+  border-radius: var(--link-border-radius);
+  box-shadow: 0 1rem 3rem hsla(190, 4%, 74%, 0.18);
+  display: flex;
+  flex-direction: column;
+  transition:
+    all 0.5s cubic-bezier(0.74, -0.18, 0.3, 0.48),
+    background-color 1.5s ease-in-out;
+  padding: var(--container-padding);
+  position: relative;
+  max-width: unset;
+  margin: 0;
+  width: 100%;
+  padding-top: calc(56.25% - var(--container-padding));
+  z-index: 0;
+
+  .baseFeaturedLinkImage {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    border-radius: var(--link-border-radius);
+    overflow: hidden;
+
+    span {
+      box-sizing: border-box;
+      display: block;
+      overflow: hidden;
+      background: none;
+      opacity: 1;
+      border: 0;
+      margin: 0;
+      padding: 0;
+
+      img {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.37), transparent);
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .baseFeaturedLinkItem {
+    display: flex;
+
+    .baseFeaturedLinkBody {
+      display: flex;
+      flex-direction: column;
+      margin-top: -46%;
+      transition: all 0.5s ease-in-out;
+      width: 100%;
+      z-index: 10;
+
+      .container {
+        display: flex;
+        max-width: 768px;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        .baseFeaturedLinkTitle {
+          color: var(--white);
+          font-family: var(--font-family);
+          font-weight: var(--font-weight-semibold);
+          font-size: 0.875rem;
+          line-height: 1.375rem;
+          margin: 0;
+          max-width: 80%;
+          overflow-wrap: break-word;
+        }
+
+        .baseFeaturedLinkSocialIconBottom {
+          width: 24px;
+          height: 24px;
+          display: inline-block;
+          margin-left: 0.5rem;
+
+          svg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    &::before {
+      background: var(--linkcard-overlay-gradient);
+      border-bottom-left-radius: var(--link-border-radius);
+      border-bottom-right-radius: var(--link-border-radius);
+      bottom: 0;
+      content: '';
+      height: 5rem;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+      transition: background 0.8s ease-in-out;
+    }
+  }
+
+  iframe {
+    border-radius: var(--link-border-radius);
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
