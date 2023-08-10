@@ -8,7 +8,7 @@ export default function BaseEmbeddedLink({ content }: any) {
 
   return (
     <div className={styles.baseLinkContainer}>
-      <iframe src={link} frameBorder="0" />
+      <iframe src={link} frameBorder="0" loading="lazy" />
     </div>
   );
 }

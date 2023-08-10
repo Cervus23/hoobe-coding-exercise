@@ -2,10 +2,11 @@ import styles from '@/styles/BaseLink.module.scss';
 import HoobeIcon from '../../public/assets/HoobeIcon';
 import Image from 'next/image';
 import testImage from '@assets/content-id-f9wzS1vHcf-image.jpg';
+import Link from 'next/link';
 
 export default function BaseFeaturedLink({ content }: any) {
   return (
-    <a href={content.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+    <Link href={content.link} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
       <div className={styles.baseLinkContainer}>
         <div className={styles.baseFeaturedLinkImage}>
           <span>
@@ -26,6 +27,6 @@ export default function BaseFeaturedLink({ content }: any) {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
