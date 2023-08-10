@@ -1,5 +1,7 @@
 import styles from '@/styles/BaseLink.module.scss';
 import HoobeIcon from '../../public/assets/HoobeIcon';
+import Image from 'next/image';
+import testImage from '@assets/content-id-f9wzS1vHcf-image.jpg';
 
 export default function BaseFeaturedLink({ content }: any) {
   return (
@@ -8,7 +10,7 @@ export default function BaseFeaturedLink({ content }: any) {
         <div className={styles.baseFeaturedLinkImage}>
           <span>
             {content.hasPhoto && (
-              <img src={`/assets/content-id-${content.id}-image.jpg`} alt="link image" />
+              <Image src={testImage} width={1024} height={1024} alt="link image" />
             )}
           </span>
         </div>
